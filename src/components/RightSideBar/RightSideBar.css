@@ -1,0 +1,28 @@
+.meetings {
+}
+
+.meetings-item {
+   display: flex;
+   align-items: center;
+}
+
+.icon-background {
+   background-color: #eceef5;
+   padding: 1rem;
+   border-radius: 50%;
+   margin: 1rem;
+}
+
+.meeting-details {
+}
+
+.video-icon {
+   margin-right: 1rem;
+}
+
+.time-icon {
+   margin-right: 0.5rem;
+}
+.time-container {
+   margin: 1rem;
+}

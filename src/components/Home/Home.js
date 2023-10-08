@@ -58,11 +58,12 @@ const Home = () => {
                </Badge>
             </span>
             <div className='home-head-title'>
-               <h5>Good Evening Team!</h5>
-               <p>
+               <h1>Good Evening Team!</h1>
+               <p className=''>
                   Have an in-depth look at the metrics whithin your dashboard.
                </p>
             </div>
+
             <div className='home-head-icons'>
                <div className='home-head-search'>
                   <BiSearch size={20} />

@@ -1,0 +1,47 @@
+.main-body {
+   background-color: #fff !important;
+   width: 100%;
+   /* position: absolute; */
+}
+
+/* .ant-card .ant-card-body { */
+.card-1 {
+   background-color: #6e63e5 !important;
+   color: #fff;
+   align-items: center;
+   margin: 1rem 2rem 1rem 2rem;
+   border-radius: 1rem;
+}
+.ant-card-body {
+   display: flex;
+   flex-direction: row;
+   padding: 0;
+   align-items: center;
+   margin: 0;
+}
+
+.card1-content {
+   display: flex;
+   align-items: center;
+}
+.card1-content-text {
+   flex-direction: column;
+   margin-left: 0.5rem;
+}
+
+.previous-differnce {
+   background-color: #fff;
+   color: #6e63e5;
+   border-radius: 1rem;
+   font-size: small;
+   padding: 2px;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+}
+
+@media (max-width: 1030px) {
+   .ant-card .ant-card-body {
+      flex-direction: column;
+   }
+}
