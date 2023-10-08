@@ -1,0 +1,52 @@
+.home {
+   background-color: white;
+   padding: 1.5rem;
+}
+
+/* .avatar-wrapper {
+   display: flex;
+   align-items: center;
+   margin-left: 20px;
+   border-color: #ff0000;
+   border-width: 2px;
+   overflow: 'hidden';
+} */
+
+/* .avatar-icon {
+   background-color: red;
+   padding: 2rem;
+} */
+
+.home-top-head {
+   display: flex;
+}
+.home-head-title {
+   margin-left: 3rem;
+}
+.home-head-search {
+   background-color: #f3f4f7;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0.5rem;
+   margin: auto;
+   border-radius: 50%;
+   margin-right: 2rem;
+}
+.home-head-icons {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   margin-left: auto;
+}
+.head-profile {
+   display: flex;
+   align-items: center;
+   border-radius: 4rem;
+   padding: 0 0.5rem 0 0.5rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   box-shadow: 0px 0px 6px 1px #e5e5e5;
+   margin-left: auto;
+}
