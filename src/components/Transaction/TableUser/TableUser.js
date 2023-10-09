@@ -1,13 +1,15 @@
 import { Avatar } from 'antd';
 import './TableUser.css';
-const TableUser = (props) => {
+function TableUser({ cname, email }) {
    return (
       <div className='table-user'>
          <Avatar src='https://xsgames.co/randomusers/avatar.php?g=pixel&key=2' />
-         <h5>{props.cname}</h5>
-         <p>{props.email}</p>
+         <div className='name-email'>
+            <h3>{cname}</h3>
+            <p>{email}</p>
+         </div>
       </div>
    );
-};
+}
 
 export default TableUser;

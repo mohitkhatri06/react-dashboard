@@ -6,10 +6,12 @@ import NavBar from './components/NavBar/NavBar';
 import SideBar from './components/SideBar/SideBar';
 import Home from './components/Home/Home';
 import MainContent from './components/MainContent/MainContent';
-import { BiHomeAlt2, BiBarChartAlt2 } from 'react-icons/bi';
+import { BiHomeAlt2, BiBarChartAlt2, BiHelpCircle } from 'react-icons/bi';
 import { MdOutlineExplore } from 'react-icons/md';
 import { TbShoppingBag } from 'react-icons/tb';
 import { AiOutlineMessage } from 'react-icons/ai';
+import { RiSettingsLine } from 'react-icons/ri';
+import { IoMdFolderOpen } from 'react-icons/io';
 import RightSideBar from './components/RightSideBar/RightSideBar';
 import { MobileView, isMobile } from 'react-device-detect';
 
@@ -44,6 +46,34 @@ function App() {
          name: 'Inbox',
          icon: <AiOutlineMessage className='icons' />,
       },
+      {
+         id: 5,
+         name: 'Tools',
+      },
+      {
+         id: 6,
+         name: 'Setting',
+         icon: <RiSettingsLine className='icons' />,
+      },
+      {
+         id: 7,
+         name: 'Help',
+         icon: <BiHelpCircle className='icons' />,
+      },
+      {
+         id: 8,
+         name: 'Projects',
+      },
+      {
+         id: 9,
+         name: 'Amazon',
+         icon: <IoMdFolderOpen className='icons' />,
+      },
+      {
+         id: 10,
+         name: 'Invinity HQ',
+         icon: <IoMdFolderOpen className='icons' />,
+      },
    ];
    const [contentIndex, setContentIndex] = useState(0);
    const [selectedKey, setSelectedKey] = useState('0');
@@ -60,8 +90,6 @@ function App() {
       padding: 0,
       lineHeight: '64px',
    });
-
-   //choose the screen size
 
    const Menu = (
       <TopicMenu

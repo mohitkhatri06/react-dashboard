@@ -57,13 +57,13 @@ const Home = () => {
       <div className='home'>
          <div className='home-top-head'>
             <span>
-               <Badge count={3} color={'#6e63e5'}>
+               <Badge count={3} color={'#6e63e5'} style={{ margin: '0.8rem' }}>
                   <div className='avatar-wrapper'>
                      <Avatar
                         className='avatar-icon'
                         shape='circle'
                         size={90}
-                        src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'
+                        src='https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671122.jpg?w=740&t=st=1696874510~exp=1696875110~hmac=a07657027e83bf6703cab7a1cb093af7047968355ff5324f46f0a9d4f0b2c22f'
                      />
                   </div>
                </Badge>
@@ -105,7 +105,7 @@ const Home = () => {
                         className='avatar-icon'
                         shape='circle'
                         size={30}
-                        src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'
+                        src='https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671122.jpg?w=740&t=st=1696874510~exp=1696875110~hmac=a07657027e83bf6703cab7a1cb093af7047968355ff5324f46f0a9d4f0b2c22f'
                      />
                      Joantosan
                      <GrFormDown />

@@ -1,3 +1,12 @@
 .table-user {
    display: flex;
+   align-items: center;
+}
+
+.name-email {
+   flex-direction: column;
+   margin-left: 1rem;
+}
+.name-email p {
+   opacity: 50%;
 }

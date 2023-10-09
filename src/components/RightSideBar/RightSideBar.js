@@ -51,14 +51,18 @@ const RightSideBar = () => {
             <br /> Control <AvatarGroups maxCounting={3} />
          </h1>
 
-         <div>
+         <div className='platform'>
             <p>
-               The Professional Platform <GrFormDown />
+               The Professional Platform{' '}
+               <span>
+                  {' '}
+                  <GrFormDown />
+               </span>
             </p>
          </div>
          <div>
             <Button style={{ color: '#6e63e5', width: '80%' }}>
-               <span>Upgrade Now {<BsArrowRight />}</span>
+               Upgrade Now {<BsArrowRight />}
             </Button>
          </div>
          <Divider />

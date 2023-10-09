@@ -15,7 +15,13 @@ const CardTotalSales = () => {
                   </div>
 
                   <div className='differnce-with-val'>
-                     <h2 style={{ color: '#6e63e5', fontWeight: 700 }}>
+                     <h2
+                        style={{
+                           color: '#6e63e5',
+                           fontWeight: 800,
+                           fontSize: '2rem',
+                        }}
+                     >
                         $956.82k
                      </h2>
                      <span className='differnce-arrow'>
@@ -31,10 +37,8 @@ const CardTotalSales = () => {
                   </span>
                </div>
             </div>
-            <div className='container'>
-               <div className='container-data'>
-                  <BarChart />
-               </div>
+            <div className='container-data'>
+               <BarChart />
             </div>
          </Card>
       </>

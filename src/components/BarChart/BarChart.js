@@ -44,7 +44,7 @@ export const options = {
       },
       title: {
          display: true,
-         text: 'Chart.js Bar Chart',
+         text: 'Analytic + 5.4%',
       },
    },
 };
@@ -73,7 +73,7 @@ export const data = {
 
 export function BarChart() {
    return (
-      <div style={{ height: '160px' }}>
+      <div style={{ height: '200px', width: '400px' }}>
          <Bar options={options} data={data} />
       </div>
    );

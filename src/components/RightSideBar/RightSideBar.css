@@ -1,6 +1,15 @@
 .main-right-side {
    padding-left: 0.5rem;
 }
+.main-right-side .platform {
+   margin: 20px 0;
+}
+.main-right-side .platform p {
+   opacity: 0.5;
+}
+.main-right-side .platform p > span {
+   padding-left: 15px;
+}
 
 .meetings {
 }

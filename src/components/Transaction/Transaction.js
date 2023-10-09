@@ -1,25 +1,20 @@
 import './Transaction.css';
-import { Space } from 'antd';
-import { Button, Row, Col, Dropdown } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
+import { DatePicker, Form, Space } from 'antd';
+import { Dropdown } from 'antd';
 import AvatarGroups from '../AvatarGroups/AvatarGroups';
 import Table from 'ant-responsive-table';
 import TableUser from './TableUser/TableUser';
-
-//const { Column } = Table;
+import { GrFormDown } from 'react-icons/gr';
+import TableStatus from './TableStatus/TableStatus';
 
 const Transaction = () => {
-   // const onChange = (date, dateString) => {
-   //    console.log(date, dateString);
-   // };
-
    const dataSource = [
       {
          key: '1',
-         status: 'Success',
+         status: <TableStatus status={'success'} />,
          date: 'Nov 02,2021',
          invoice: '$100,00',
-         cutomer: (
+         customer: (
             <TableUser
                cname={'Floyd Johntosan'}
                email={'johntosan@gmail.com'}
@@ -29,10 +24,10 @@ const Transaction = () => {
       },
       {
          key: '2',
-         status: 'Success',
+         status: <TableStatus status={'pending'} />,
          date: 'Nov 02,2021',
          invoice: '$100,00',
-         cutomer: (
+         customer: (
             <TableUser
                cname={'Floyd Johntosan'}
                email={'johntosan@gmail.com'}
@@ -42,6 +37,20 @@ const Transaction = () => {
       },
    ];
 
+   const items = [
+      {
+         key: '1',
+         label: 'Item 1',
+      },
+      {
+         key: '2',
+         label: 'Item 2',
+      },
+      {
+         key: '3',
+         label: 'Item 3',
+      },
+   ];
    const columns = [
       {
          title: 'Customer',
@@ -94,69 +103,69 @@ const Transaction = () => {
       { id: 10, month: 'November' },
       { id: 11, month: 'December' },
    ];
+
+   const config = {
+      rules: [{ type: 'object', required: true, message: 'Month' }],
+   };
+
    return (
       <>
          <div className='transaction-main'>
-            <div>
-               <h3>Transaction History</h3>
-               <Dropdown menu={{ months }}>
-                  <a
-                     onClick={(e) => e.preventDefault()}
-                     href='http://localhost:3000/'
+            <div className='transaction-month'>
+               <h2>Transaction History</h2>
+               <Form.Item name='month-picker' {...config}>
+                  <DatePicker picker='month' />
+               </Form.Item>
+            </div>
+            <div className='d-flex justify-content-between'></div>
+
+            <div className='transaction-drops'>
+               <div className='select-recipient'>
+                  <Dropdown
+                     menu={{
+                        items,
+                        selectable: true,
+                        defaultSelectedKeys: ['3'],
+                     }}
                   >
-                     <Space>{months.month}</Space>
-                  </a>
-               </Dropdown>
+                     <Space>
+                        Recipient
+                        <GrFormDown />
+                     </Space>
+                  </Dropdown>
+               </div>
+               <div className='select-amount'>
+                  <Dropdown
+                     menu={{
+                        items,
+                        selectable: true,
+                        defaultSelectedKeys: ['3'],
+                     }}
+                  >
+                     <Space>
+                        Amount
+                        <GrFormDown />
+                     </Space>
+                  </Dropdown>
+               </div>
+               <div className='select-status'>
+                  <Dropdown
+                     menu={{
+                        items,
+                        selectable: true,
+                        defaultSelectedKeys: ['3'],
+                     }}
+                  >
+                     <Space>
+                        Status
+                        <GrFormDown />
+                     </Space>
+                  </Dropdown>
+               </div>
             </div>
-            <div className='d-flex justify-content-between'>
-               {/* <input type='date' /> */}
-               {/* <button type='button' className='calendar-button'>
-                  Month
-               </button> */}
-               {/* <DatePicker onChange={onChange} picker='month' /> */}
-               {/* <Button
-                  type='primary'
-                  shape='rectangle'
-                  icon={<CalendarOutlined />}
-               /> */}
-            </div>
-            <Row>
-               <Col>
-                  <Dropdown>
-                     <Button>
-                        <Space>
-                           Recepient
-                           <DownOutlined />
-                        </Space>
-                     </Button>
-                  </Dropdown>
-                  <Dropdown>
-                     <Button>
-                        <Space>
-                           Amount
-                           <DownOutlined />
-                        </Space>
-                     </Button>
-                  </Dropdown>
-                  <Dropdown>
-                     <Button>
-                        <Space>
-                           Status
-                           <DownOutlined />
-                        </Space>
-                     </Button>
-                  </Dropdown>
-               </Col>
-            </Row>
+
             {/* TABLE START */}
-            <div>
-               {/* <Table dataSource={userData} pagination={false}>
-                  <Column title='Customer' dataIndex='Name' key='Name' />
-                  <Column title='Status' dataIndex='status' key='status' />
-                  <Column title='Date' dataIndex='date' key='date' />
-                  <Column title='Invoice' dataIndex='invoice' key='invoice' />
-                  <Column title='People' dataIndex='people' key='people' />
-               </Table> */}
+            <div className='table-main'>
                <Table
                   antTableProps={{
                      showHeader: true,

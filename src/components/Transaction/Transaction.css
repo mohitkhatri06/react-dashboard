@@ -8,6 +8,14 @@
    padding: 2rem;
 }
 
+.transaction-month {
+   display: flex;
+   justify-content: space-between;
+}
+.transaction-month h2 {
+   font-weight: 500;
+   font-size: 2rem;
+}
 .calendar-button {
    width: 100px;
    height: 50px;
@@ -19,11 +27,43 @@
    cursor: pointer;
 }
 
+.table-main {
+   margin-top: 2rem;
+}
+
+.transaction-drops {
+   display: flex;
+}
+.select-recipient {
+   align-items: center;
+   border-radius: 0.4rem;
+   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+   background-color: #f3f4f8;
+   margin-right: 1rem;
+}
+.select-amount {
+   align-items: center;
+   border-radius: 0.4rem;
+   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+   background-color: #f3f4f8;
+   margin-right: 1rem;
+}
+.select-status {
+   align-items: center;
+   border-radius: 0.4rem;
+   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+   background-color: #f3f4f8;
+   margin-right: 1rem;
+}
+
 @media (max-width: 800px) {
    .transaction-main {
       padding: 0.5rem;
    }
    .ant-card div {
       width: auto;
+   }
+   .table-main {
+      margin-top: 0.5rem;
    }
 }
