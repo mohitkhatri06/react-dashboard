@@ -1,10 +1,9 @@
 import './Transaction.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
-import { DatePicker, Space } from 'antd';
+import { Space } from 'antd';
 import { Button, Row, Col, Dropdown } from 'antd';
-import { CalendarOutlined, DownOutlined } from '@ant-design/icons';
+import { DownOutlined } from '@ant-design/icons';
 import { Table } from 'antd';
+import AvatarGroups from '../AvatarGroups/AvatarGroups';
 const { Column } = Table;
 
 const Transaction = () => {
@@ -15,19 +14,22 @@ const Transaction = () => {
    const userData = [
       {
          key: '1',
-         Name: 'John',
+         Name: 'Floyd Johntosan',
          status: 'Success',
          date: 'Nov 02,2021',
          invoice: '$100,00',
-         people: ['nice', 'developer'],
+         email: 'johntosan@gmail.com',
+         people: <AvatarGroups maxCounting={2} />,
       },
       {
          key: '2',
-         Name: 'John',
+         Name: 'Floyd Johntosan',
          status: 'Success',
          date: 'Nov 02,2021',
          invoice: '$100,00',
-         people: ['nice', 'developer'],
+         email: 'johntosan@gmail.com',
+
+         people: <AvatarGroups maxCounting={2} />,
       },
    ];
 
@@ -51,7 +53,10 @@ const Transaction = () => {
             <div>
                <h3>Transaction History</h3>
                <Dropdown menu={{ months }}>
-                  <a onClick={(e) => e.preventDefault()}>
+                  <a
+                     onClick={(e) => e.preventDefault()}
+                     href='http://localhost:3000/'
+                  >
                      <Space>{months.month}</Space>
                   </a>
                </Dropdown>

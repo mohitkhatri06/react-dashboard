@@ -48,9 +48,9 @@ export const options = {
    },
    responsive: true,
    borderRadius: 6,
-   8: 0,
-   8: 0,
-   8: 9,
+   2: 0,
+   3: 0,
+   7: 9,
 
    plugins: {
       legend: {
@@ -86,5 +86,9 @@ export const data = {
 };
 
 export function BarChart() {
-   return <Bar options={options} data={data} />;
+   return (
+      <div style={{ height: '160px' }}>
+         <Bar options={options} data={data} />
+      </div>
+   );
 }

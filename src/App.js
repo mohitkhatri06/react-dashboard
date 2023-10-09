@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Layout, Row } from 'antd';
 import TopicMenu from './components/TopicMenu';
-
 import './App.css';
-
 import NavBar from './components/NavBar/NavBar';
 import SideBar from './components/SideBar/SideBar';
 import Home from './components/Home/Home';
-import { Content } from 'antd/es/layout/layout';
 import MainContent from './components/MainContent/MainContent';
-import Transaction from './components/Transaction/Transaction';
 import { BiHomeAlt2, BiBarChartAlt2 } from 'react-icons/bi';
 import { MdOutlineExplore } from 'react-icons/md';
 import { TbShoppingBag } from 'react-icons/tb';
 import { AiOutlineMessage } from 'react-icons/ai';
 import RightSideBar from './components/RightSideBar/RightSideBar';
+
 function App() {
    //  const topics = ['Home', 'Analytic', 'Explore', 'Shop', 'Inbox'];
 
-   const { Header, Footer, Sider, Content } = Layout;
+   const { Header } = Layout;
 
    const topics = [
       {
@@ -57,7 +54,7 @@ function App() {
 
    const headerStyle = (React.CSSProperties = {
       color: '#000',
-      height: 130,
+      height: 'auto',
       backgroundColor: '#fff',
       padding: 0,
       lineHeight: '64px',

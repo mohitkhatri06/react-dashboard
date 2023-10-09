@@ -7,11 +7,13 @@ const TopicMenu = ({ topics, selectedKey, changeSelectedKey }) => {
 
    topics.forEach((topic, index) =>
       styledTopics.push(
-         <Menu.Item key={index} onClick={changeSelectedKey}>
-            {/* <Icon icon={topic.icon} /> */}
-            {topic.icon}
-            {topic.name}
-         </Menu.Item>
+         <>
+            <Menu.Item key={index} onClick={changeSelectedKey}>
+               {/* <Icon icon={topic.icon} /> */}
+               {topic.icon}
+               {topic.name}
+            </Menu.Item>
+         </>
       )
    );
 

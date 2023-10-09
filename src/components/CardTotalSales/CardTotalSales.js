@@ -1,23 +1,33 @@
 import { Card } from 'antd';
 import './CardTotalSales.css';
 import { BarChart } from '../BarChart/BarChart';
-import Transaction from '../Transaction/Transaction';
+import { BiSolidUpArrow } from 'react-icons/bi';
 
 const CardTotalSales = () => {
    return (
       <>
-         <Card className='card' bordered={true}>
+         <Card className='card2' bordered={true}>
             <div className='container'>
                <div className='container-data'>
-                  <h4>Total Sales & Cost</h4>
-                  <span>Last 60 days</span>
+                  <div>
+                     <h3>Total Sales & Cost</h3>
+                     <span className='text-opacity'>Last 60 days</span>
+                  </div>
+
+                  <div className='differnce-with-val'>
+                     <h2 style={{ color: '#6e63e5', fontWeight: 700 }}>
+                        $956.82k
+                     </h2>
+                     <span className='differnce-arrow'>
+                        <BiSolidUpArrow size={9} /> +5.4%
+                     </span>
+                  </div>
                   <span>
-                     <h2>$956.82k</h2>
-                     <>+5.4%</>
-                  </span>
-                  <span>
-                     <p>+8.20k</p>
-                     <p>vs prev. 60 days</p>
+                     <p>
+                        {' '}
+                        <span style={{ color: '#45ca6b' }}>+8.20k</span>
+                        <span className='text-opacity'> vs prev. 60 days</span>
+                     </p>
                   </span>
                </div>
             </div>

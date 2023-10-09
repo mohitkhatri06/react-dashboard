@@ -1,5 +1,4 @@
-import { Avatar, Badge } from 'antd';
-import { IoMdContact } from 'react-icons/io';
+import { Avatar, Badge, Col, Row } from 'antd';
 import './Home.css';
 import { Dropdown, Space } from 'antd';
 
@@ -12,7 +11,11 @@ const Home = () => {
       {
          key: '1',
          label: (
-            <a target='_blank' rel='noopener noreferrer' href=''>
+            <a
+               target='_blank'
+               rel='noopener noreferrer'
+               href='http://localhost:3000/'
+            >
                Profile
             </a>
          ),
@@ -20,7 +23,11 @@ const Home = () => {
       {
          key: '2',
          label: (
-            <a target='_blank' rel='noopener noreferrer' href=''>
+            <a
+               target='_blank'
+               rel='noopener noreferrer'
+               href='http://localhost:3000/'
+            >
                Settings
             </a>
          ),
@@ -29,7 +36,11 @@ const Home = () => {
       {
          key: '3',
          label: (
-            <a target='_blank' rel='noopener noreferrer' href=''>
+            <a
+               target='_blank'
+               rel='noopener noreferrer'
+               href='http://localhost:3000/'
+            >
                Location
             </a>
          ),
@@ -58,10 +69,17 @@ const Home = () => {
                </Badge>
             </span>
             <div className='home-head-title'>
-               <h1>Good Evening Team!</h1>
-               <p className=''>
-                  Have an in-depth look at the metrics whithin your dashboard.
-               </p>
+               <Col>
+                  <Row>
+                     <h1>Good Evening Team!</h1>
+                  </Row>
+                  <Row>
+                     <p>
+                        Have an in-depth look at the metrics whithin your
+                        dashboard.
+                     </p>
+                  </Row>
+               </Col>
             </div>
 
             <div className='home-head-icons'>

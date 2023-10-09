@@ -1,3 +1,7 @@
+.main-right-side {
+   padding-left: 0.5rem;
+}
+
 .meetings {
 }
 
@@ -25,4 +29,10 @@
 }
 .time-container {
    margin: 1rem;
+}
+
+@media (max-width: 1252px) {
+   .main-right-side {
+      padding-left: 5rem;
+   }
 }

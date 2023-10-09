@@ -1,8 +1,9 @@
 .sidebar {
-   height: 100vh;
+   height: auto;
    /* border-right: 1px solid rgb(239, 239, 239); */
    padding-right: 1rem;
    padding-left: 1rem;
+   background-color: aqua;
 }
 
 .logo {

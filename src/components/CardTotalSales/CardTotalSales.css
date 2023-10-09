@@ -1,7 +1,28 @@
-.card {
+.card2 {
    color: #000000;
-   background-color: aqua;
    align-items: center;
-   margin: 1rem 2rem 0rem 2rem;
-   border-radius: 2rem;
+   margin: 2rem 2rem 0rem 2rem;
+   border-radius: 1.5rem;
+   background-color: antiquewhite;
+}
+
+.differnce-arrow {
+   background-color: #c3f9d9;
+   border-radius: 1.5rem;
+   font-size: 0.7rem;
+   color: #45ca6b;
+   padding: 0 0.4rem 0 0.4rem;
+   text-align: center;
+   margin-left: 1rem;
+}
+
+.differnce-with-val {
+   margin-top: 1.5rem;
+   display: flex;
+   align-items: center;
+}
+
+.text-opacity {
+   opacity: 50%;
+   font-size: 0.8rem;
 }

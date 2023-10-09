@@ -1,11 +1,11 @@
-import { Avatar, Button, Tooltip, Divider, Calendar } from 'antd';
+import { Button, Divider, Calendar } from 'antd';
 import './RightSideBar.css';
-import { FaUserAlt } from 'react-icons/fa';
 import { GrFormDown } from 'react-icons/gr';
 import { BsArrowRight } from 'react-icons/bs';
 import React from 'react';
 import { LiaVideoSolid } from 'react-icons/lia';
 import { MdOutlineWatchLater } from 'react-icons/md';
+import AvatarGroups from '../AvatarGroups/AvatarGroups';
 
 const RightSideBar = () => {
    const wrapperStyle = (React.CSSProperties = {
@@ -38,47 +38,17 @@ const RightSideBar = () => {
    ];
 
    return (
-      <div>
-         <a>Premium Access</a>
+      <div className='main-right-side'>
+         <a
+            href='http://localhost:3000/'
+            style={{ textDecoration: 'none', color: '#6e63e5' }}
+         >
+            Premium Access
+         </a>
          <h1>
             Take Back <br />
             Your Creative
-            <br /> Control{' '}
-            <Avatar.Group
-               maxCount={3}
-               maxStyle={{ color: '#fff', backgroundColor: '#000' }}
-            >
-               <Avatar src='https://xsgames.co/randomusers/avatar.php?g=pixel&key=2' />
-               <Avatar
-                  style={{ backgroundColor: '#1677ff' }}
-                  icon={<FaUserAlt />}
-               />
-               <Avatar src='https://xsgames.co/randomusers/avatar.php?g=pixel&key=7' />
-               <Tooltip title='Ant User' placement='top'>
-                  <Avatar
-                     style={{ backgroundColor: '#87d068' }}
-                     icon={<FaUserAlt />}
-                  />
-               </Tooltip>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-
-               <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-            </Avatar.Group>
+            <br /> Control <AvatarGroups maxCounting={3} />
          </h1>
 
          <div>
@@ -101,10 +71,10 @@ const RightSideBar = () => {
                <div key={item.id}>
                   <div className='meetings-item'>
                      <div className='icon-background'>
-                        <img width={30} src={item.icon} />
+                        <img width={30} src={item.icon} alt='icon' />
                      </div>
                      <div className='meeting-details'>
-                        <h6>{item.title}</h6>
+                        <h4>{item.title}</h4>
                         <span style={{ opacity: '50%' }}>
                            <LiaVideoSolid size={20} className='video-icon' />
                            {item.place}
@@ -118,7 +88,7 @@ const RightSideBar = () => {
                         </span>
                      </div>
                   </div>
-                  <Divider />
+                  {/* <Divider /> */}
                </div>
             ))}
          </div>
