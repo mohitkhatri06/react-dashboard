@@ -2,34 +2,81 @@ import './Transaction.css';
 import { Space } from 'antd';
 import { Button, Row, Col, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
-import { Table } from 'antd';
 import AvatarGroups from '../AvatarGroups/AvatarGroups';
-const { Column } = Table;
+import Table from 'ant-responsive-table';
+import TableUser from './TableUser/TableUser';
+
+//const { Column } = Table;
 
 const Transaction = () => {
    // const onChange = (date, dateString) => {
    //    console.log(date, dateString);
    // };
 
-   const userData = [
+   const dataSource = [
       {
          key: '1',
-         Name: 'Floyd Johntosan',
          status: 'Success',
          date: 'Nov 02,2021',
          invoice: '$100,00',
-         email: 'johntosan@gmail.com',
+         cutomer: (
+            <TableUser
+               cname={'Floyd Johntosan'}
+               email={'johntosan@gmail.com'}
+            />
+         ),
          people: <AvatarGroups maxCounting={2} />,
       },
       {
          key: '2',
-         Name: 'Floyd Johntosan',
          status: 'Success',
          date: 'Nov 02,2021',
          invoice: '$100,00',
-         email: 'johntosan@gmail.com',
-
+         cutomer: (
+            <TableUser
+               cname={'Floyd Johntosan'}
+               email={'johntosan@gmail.com'}
+            />
+         ),
          people: <AvatarGroups maxCounting={2} />,
+      },
+   ];
+
+   const columns = [
+      {
+         title: 'Customer',
+         dataIndex: 'customer',
+         key: 'customer',
+         showOnResponse: true,
+         showOnDesktop: true,
+      },
+      {
+         title: 'Status',
+         dataIndex: 'status',
+         key: 'status',
+         showOnResponse: true,
+         showOnDesktop: true,
+      },
+      {
+         title: 'Date',
+         dataIndex: 'date',
+         key: 'date',
+         showOnResponse: true,
+         showOnDesktop: true,
+      },
+      {
+         title: 'Invoice',
+         dataIndex: 'invoice',
+         key: 'invoice',
+         showOnResponse: true,
+         showOnDesktop: true,
+      },
+      {
+         title: 'People',
+         dataIndex: 'people',
+         key: 'people',
+         showOnResponse: true,
+         showOnDesktop: true,
       },
    ];
 
@@ -103,13 +150,22 @@ const Transaction = () => {
             </Row>
             {/* TABLE START */}
             <div>
-               <Table dataSource={userData} pagination={false}>
+               {/* <Table dataSource={userData} pagination={false}>
                   <Column title='Customer' dataIndex='Name' key='Name' />
                   <Column title='Status' dataIndex='status' key='status' />
                   <Column title='Date' dataIndex='date' key='date' />
                   <Column title='Invoice' dataIndex='invoice' key='invoice' />
                   <Column title='People' dataIndex='people' key='people' />
-               </Table>
+               </Table> */}
+               <Table
+                  antTableProps={{
+                     showHeader: true,
+                     columns,
+                     dataSource,
+                     pagination: false,
+                  }}
+                  mobileBreakPoint={768}
+               />
             </div>
          </div>
       </>

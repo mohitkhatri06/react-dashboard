@@ -31,8 +31,14 @@
    margin: 1rem;
 }
 
-@media (max-width: 1252px) {
+@media (max-width: 800px) {
    .main-right-side {
-      padding-left: 5rem;
+      padding-left: 0.5rem;
+   }
+   .meetings {
+      margin-top: 3rem;
+   }
+   .main-right-side {
+      margin-top: 3rem;
    }
 }

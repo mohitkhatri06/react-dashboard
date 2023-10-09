@@ -11,6 +11,7 @@ import { MdOutlineExplore } from 'react-icons/md';
 import { TbShoppingBag } from 'react-icons/tb';
 import { AiOutlineMessage } from 'react-icons/ai';
 import RightSideBar from './components/RightSideBar/RightSideBar';
+import { MobileView, isMobile } from 'react-device-detect';
 
 function App() {
    //  const topics = ['Home', 'Analytic', 'Explore', 'Shop', 'Inbox'];
@@ -60,21 +61,8 @@ function App() {
       lineHeight: '64px',
    });
 
-   const [isMobile, setIsMobile] = useState(false);
-
    //choose the screen size
-   const handleResize = () => {
-      if (window.innerWidth < 992) {
-         setIsMobile(true);
-      } else {
-         setIsMobile(false);
-      }
-   };
 
-   // create an event listener
-   useEffect(() => {
-      window.addEventListener('resize', handleResize);
-   });
    const Menu = (
       <TopicMenu
          topics={topics}
@@ -84,7 +72,10 @@ function App() {
    );
    return (
       <div className='App'>
-         {isMobile && <NavBar menu={Menu} />}
+         {/* {isMobile ? <NavBar menu={Menu} /> : <></>} */}
+         <MobileView>
+            <NavBar menu={Menu} />
+         </MobileView>
          <Layout>
             <SideBar menu={Menu} />
             <Layout>

@@ -42,6 +42,9 @@
    opacity: 0.5;
    line-height: 0;
 }
+.ant-badge.ant-badge-status {
+   line-height: 0;
+}
 .head-profile {
    display: flex;
    align-items: center;
@@ -62,5 +65,12 @@
    .home-head-icons {
       margin-left: 1rem;
       margin-right: auto;
+   }
+
+   .home-head-title {
+      margin-left: 0.5rem;
+   }
+   .home {
+      padding: 0.5rem;
    }
 }

@@ -1,6 +1,6 @@
 .main-body {
    background-color: #fff !important;
-   width: 100%;
+   /* width: 100%; */
    /* position: absolute; */
 }
 
@@ -16,7 +16,6 @@
    display: flex;
    flex-direction: row;
    padding: 0;
-   align-items: center;
    margin: 0;
 }
 
@@ -40,8 +39,11 @@
    justify-content: center;
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 952px) {
    .ant-card .ant-card-body {
       flex-direction: column;
+   }
+   .card-1 {
+      margin: 0.3rem;
    }
 }

@@ -36,7 +36,7 @@ const MainContent = () => {
       <div className='main-body'>
          <Card className='card-1' bordered={false}>
             {data.map((item) => (
-               <div className='card1-content'>
+               <div className='card1-content' key={item.id}>
                   <img width={50} height={50} src={item.icon} />
                   <div className='card1-content-text'>
                      <p style={{ fontWeight: '300' }}>{item.name}</p>
