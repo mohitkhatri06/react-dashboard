@@ -66,4 +66,14 @@
    .table-main {
       margin-top: 0.5rem;
    }
+   .transaction-drops {
+      flex-direction: column;
+   }
+   .select-recipient,
+   .select-amount,
+   .select-status {
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      text-align: center;
+   }
 }
